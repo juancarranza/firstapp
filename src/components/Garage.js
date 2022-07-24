@@ -19,6 +19,7 @@ const Garage = () =>{
            }  
        ]
     ); //carros[getter, setter]
+
     const carrosComponent = (carros.map((carro, index) => {
         return <Carro 
             key={`${index}-carro-${carro.modelo}`} 
@@ -27,6 +28,12 @@ const Garage = () =>{
             />//renderizacion dinamica 
         })
     );
+    
+    const eliminarUltimoCarro = () =>{
+        const newCarros = carros.slice(carros.length-1, 1);
+        setCarros(newCarros);
+    };
+
     return (<>
         <h1>Estos son los carros de mi garage: </h1>
         {//renderizacion condicional usando &&
@@ -36,6 +43,7 @@ const Garage = () =>{
             carros.length === 0 ? (<Informacion texto={"No hay carros en el garage"} /> ) : carrosComponent
             
         }
+        <button onClick={eliminarUltimoCarro}>Eliminar ultimo correo</button>
         {/*         <Carro modelo={"Hilux"} color={"gris"} />
             <Carro modelo={"Yaris"} color={"negro"} /> */
         }
