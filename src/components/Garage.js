@@ -29,7 +29,7 @@ const Garage = () =>{
         })
     );
     
-    const eliminarUltimoCarro = () =>{
+    const eliminarUltimoCarro = (prop1, prop2) =>{
         const newCarros = carros.slice(carros.length-1, 1);
         setCarros(newCarros);
     };
@@ -43,7 +43,7 @@ const Garage = () =>{
             carros.length === 0 ? (<Informacion texto={"No hay carros en el garage"} /> ) : carrosComponent
             
         }
-        <button onClick={eliminarUltimoCarro}>Eliminar ultimo correo</button>
+        <button onClick={() => {eliminarUltimoCarro(1,2)}}>Eliminar ultimo correo</button>
         {/*         <Carro modelo={"Hilux"} color={"gris"} />
             <Carro modelo={"Yaris"} color={"negro"} /> */
         }
