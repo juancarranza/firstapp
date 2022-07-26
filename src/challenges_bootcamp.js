@@ -14,7 +14,7 @@ function ensureQuestion(s) {
     
 }
 
-/* Week 1 Challenge1 (Tuesday) -> 07/18/2022
+/* Week 1 Challenge1.1 (Tuesday) -> 07/18/2022
 Reversed Words
 Complete the solution so that it reverses all of the words within the string passed in.
 
@@ -40,6 +40,44 @@ class SmallestIntegerFinder {
         return Math.min(...args);
     }
 }
+/* Week 1 Challenge (Thursday) -> 07/26/2022 
+OddorEven
+Task:
+Given a list of integers, determine whether the sum of its elements is odd or even.
+Give your answer as a string matching "odd" or "even".
+If the input array is empty consider it as: [0] (array with a zero). 
+Examples:
+Input: [0]
+Output: "even"
 
+Input: [0, 1, 4]
+Output: "odd"
+
+Input: [0, -1, -5]
+Output: "even"
+*/
+
+function oddOrEven(array) {
+    //enter code here
+   let sum=0;
+   for(let i=0;i<array.length;i++){
+     sum+=array[i];
+   }
+   return sum%2 === 0 ? 'even' : 'odd' ;
+ }
+
+function oddOrEven1(array) {
+    //enter code here
+    const sum=array.reduce(
+        (previousValue, currentValue) => previousValue + currentValue, 0
+    );
+    
+    return sum%2 === 0 ? 'even' : 'odd';    
+}
+
+function oddOrEven2(array) {
+    //enter code here
+    return array.reduce((previousValue, currentValue) => previousValue + currentValue, 0)%2 === 0 ? 'even' : 'odd';    
+}
 
 
