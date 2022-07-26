@@ -4,13 +4,15 @@ import ReactDOM from 'react-dom/client';
 //import App from './App'; //-> eliminamos el archivo 
 //simport reportWebVitals from './reportWebVitals'; -> performance de react, eliminar archivos
 import Carro from './components/Carro';
+import Form from './components/Form';
 import Garage from './components/Garage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));//encargado de crear el Virtual DOM
 root.render(
-  <React.StrictMode>
-      <Garage />
-  </React.StrictMode>
+  <>
+    <Garage />
+    <Form />
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
