@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 //import App from './App'; //-> eliminamos el archivo 
 //simport reportWebVitals from './reportWebVitals'; -> performance de react, eliminar archivos
 import Carro from './components/Carro';
+import Counter from './components/Counter';
 import Form from './components/Form';
 import Garage from './components/Garage';
 
@@ -12,6 +13,7 @@ root.render(
   <>
     <Garage />
     <Form />
+    <Counter />
   </>
 );
 
